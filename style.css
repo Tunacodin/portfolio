@@ -1,0 +1,356 @@
+* {
+  padding: 0cm;
+  margin: 0ch;
+  --color:background-image: linear-gradient(-90deg, #000000, #fbfbfb);
+
+
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+
+}
+
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+position: absolute;
+  width: 92%;
+  padding-left: 45px;
+  padding-right: 45px;
+  z-index: 1;
+  margin-top: -670px;
+}
+
+.logo img {
+position: absolute;
+margin-top: -122px;
+height: 250px;
+width: 250px;
+overflow: hidden;
+}
+/* 
+.search form {
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e1dddd;
+  font-size: 13px;
+}
+
+.search button[type="submit"] {
+  padding: 10px;
+  border: none;
+  background-color: #06003c;
+  color: #fbfbfb;
+  font-size: 16px;
+} */
+
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  
+}
+
+.menu ul {
+  
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 150px;
+  gap: 60px;
+}
+
+.menu li:not(:last-child) {
+  margin-right: 20px;
+  
+}
+
+.menu a {
+  font-size: 19px;
+  padding: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+   color: #fbfbfb;
+  
+}
+
+.menu a:hover {
+
+color: #148989;
+text-decoration: none;
+
+  border-radius: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 110vh;
+  background-image: url(/img/bg-4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 75%;
+  background-color: #00000091;
+  opacity: 0.7;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 4rem;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 95%;
+  border-radius: 10px;
+  opacity: 0.9;
+
+}
+
+.main .text{
+  color: #000000;
+width: 40%;
+height: 60%;
+margin-left: 3rem;
+
+font-size: 1.5rem;
+font-style: italic;
+
+}
+
+.main .text h1{
+display: inline-block;
+  font-size: 2rem;
+  margin: 1rem;
+  font-family:poppins;
+  font-style: normal;
+  padding-left: 10rem;
+
+}
+
+.aside {
+  width: 50%;
+  height: 95%;
+ 
+  opacity: 0.9;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+
+#slider {
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;  
+}
+
+.second {
+  margin-top: 10rem;
+}
+
+.container-2 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/bg-4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+.container-3 {
+  display: flex;
+  align-items: center;
+background-color: #0f0606;
+  justify-content: center;
+  width: 100%;
+  height: 110vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-2 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 95%;
+  height: 95%;
+  background-color: var(--color2);
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.aside h1 {
+  display: flex;
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 1rem;
+  justify-content: center;
+  padding-top: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #0f0d11;
+}
+
+#myDiv {
+  position: relative;
+  height:max-content; /* Div'in yüksekliği */
+  overflow: hidden; /* İçeriğin taşması durumunda gizleme */
+  text-align: center;
+  margin-top: -1rem;
+  width: 60%;
+}
+
+#myDiv h1 {
+  position: relative; /* Metnin başlangıç konumunu belirler */
+  margin: 0; /* Paragrafın boşluksuz olmasını sağlar */
+  animation-name: slideUp; /* Animasyon adı */
+  animation-duration: 1s; /* Animasyon süresi */
+  font-size: 60px; /* Metin boyutu */
+  color: #fbfbfb;
+  opacity: 1!important;
+}
+
+#myDiv p{
+  position: relative;
+  bottom: 0px; /* Metnin başlangıç konumunu belirler */
+  animation-name: slideUp; /* Animasyon adı */
+  animation-duration: 1s; /* Animasyon süresi */
+  font-size: 20px; /* Metin boyutu */
+  color: #fbfbfb;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -50px; /* Başlangıç konumu */
+    opacity: 0; /* Tamamen saydamlık */
+  }
+  100% {
+    bottom: 0; /* Bitiş konumu */
+    opacity: 1; /* Tamamen opaklık */
+  }
+}
+
+/* Scrollbar olmadan sayfa kaydırma */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Sayfa yenilendiğinde animasyon tekrarlanacak */
+body:not([data-page-loaded="true"]) #myDiv p {
+  animation-name: none;
+  bottom: -50px;
+  opacity: 0;
+}
+
+/* Animasyon bittiğinde metin orada kalacak */
+#myDiv p.animation-done {
+  bottom: 0;
+  opacity: 1;
+}
+
+
+.icons {
+
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-top: 5rem;
+  gap: 2.5rem;
+  margin-bottom: 0.5rem;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  text-decoration: none;
+
+
+}
+.nav-link-text {
+  font-size: 0.675rem;
+  line-height: 1.25rem;
+  font-weight: 550;
+  text-align: center;
+  font-family: inherit;
+  color: #eee !important;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+.nav-links {
+  color: rgba(255, 51, 51, 0.8);
+  background-color: rgb(21 22 23);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+
+
+}
+  .nav-links:hover {
+    background-color: rgba(255, 51, 51, 0.8);
+    color: #eee !important;
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+
