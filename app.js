@@ -27,5 +27,15 @@ window.addEventListener("load", function () {
   setTimeout(() => {
     p.classList.add("animation-done");
     document.body.dataset.pageLoaded = true;
-  }, 1500);
+  }, 2000);
 });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.querySelector(".navbar").classList.add("hidden");
+  } else {
+    document.querySelector(".navbar").classList.remove("hidden");
+  }
+}
