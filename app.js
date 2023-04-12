@@ -1,41 +1,35 @@
+const navLinks = document.querySelectorAll('nav ul li a');
 
-var currentIndex = 0;
-var imgElement = document.getElementById("slider-img");
-
-var paths = [
-    "../img/foto1.jpg",
-    "../img/foto2.jpg",
-    "../img/foto3.jpg",
-]
-
-
-setInterval(function () {
-        
-  imgElement.src = paths[currentIndex];
-  currentIndex++;
-    if (currentIndex >= paths.length) { 
-        currentIndex = 0;
+// Sayfa kaydırıldığında her bir nav linki için hover stilini ekleyin/çıkarın
+window.addEventListener('scroll', () => {
+  let fromTop = window.scrollY;
+  navLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+    if (
+      section.offsetTop <= fromTop + 200 &&
+      section.offsetTop + section.offsetHeight > fromTop + 200
+    ) {
+      link.classList.add('hover');
+    } else {
+      link.classList.remove('hover');
     }
-         
-
-}, 2000);
-
-/* Sayfa yüklenince animasyonu tetikleyen kod */
-window.addEventListener("load", function () {
-  const div = document.getElementById("myDiv");
-  const p = div.querySelector("p");
-  setTimeout(() => {
-    p.classList.add("animation-done");
-    document.body.dataset.pageLoaded = true;
-  }, 2000);
+  });
 });
 
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.querySelector(".navbar").classList.add("hidden");
-  } else {
-    document.querySelector(".navbar").classList.remove("hidden");
-  }
-}
+  function yenidenYukle() {
+      // Tüm animasyonlu öğeleri seçin
+      const animasyonluOgeler = document.querySelectorAll('.text');
+
+      // Her bir animasyonlu öğe için bir yeniden yükleme olayı ekleme
+      animasyonluOgeler.forEach((elem) => {
+        elem.addEventListener('animationiteration', () => {
+          elem.style.animation = 'none';
+          elem.offsetHeight; // Yeniden yüklenme için bir bekleme süresi
+          elem.style.animation = null;
+        });
+      });
+
+      // Sayfayı yenileme
+      location.reload();
+    }
